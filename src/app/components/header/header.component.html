@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-md d-none d-md-flex navbar-light bg-light">
+  <div class="header-nav container-fluid">
+    <!-- <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto d-none d-lg-flex">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            (click)="scrollToSection('about')"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('resume')">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('projects')">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('education')"
+            >Education</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToSection('contact')">Contact</a>
+        </li>
+      </ul>
+      <button class="see_more d-none d-md-block" (click)="downloadCV()">
+        Download CV
+      </button>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,117 @@
+.tab-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #e8e8e8;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #fff;
+  border-radius: 5px;
+  width: 100%;
+  /* min-height: 400px; */
+}
+
+.tabs {
+  position: relative;
+  display: flex;
+  width: 100%;
+  box-shadow: 5px 5px 14px #bebebe, -5px -5px 14px #fff;
+}
+
+/* .tabs .line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  border-radius: 15px;
+  background-color: #c23564;
+  transition: all 0.2s ease;
+} */
+.tab-item {
+  font-weight: 700;
+  min-width: 80px;
+  /* max-width: 720px; */
+  width: 100%;
+  padding: 16px 20px 11px 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #333;
+  border-radius: 5px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+/* .tab-icon {
+  font-size: 24px;
+  width: 32px;
+  position: relative;
+  top: 2px;
+} */
+/* .tab-item:hover {
+  opacity: 1;
+  background-color: rgba(194, 53, 100, 0.05);
+  border-color: rgba(194, 53, 100, 0.1);
+} */
+.tab-item.active {
+  opacity: 1;
+  box-shadow: -8px -8px 20px #fff, 8px 8px 20px #bebebe,
+    inset -8px -8px 20px #fff, inset 8px 8px 20px #bebebe;
+  color: transparent;
+  background-image: var(--gradient-animation);
+  -webkit-background-clip: text;
+  animation: colorShift 5s linear infinite;
+  -webkit-background-size: 500%;
+  background-size: 500%;
+}
+.tab-content {
+  padding: 28px 0;
+  min-height: 450px;
+}
+.tab-pane {
+  color: #333;
+  display: none;
+  padding: 0 28px;
+}
+.tab-pane.active {
+  display: block;
+}
+.tab-pane h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.tab-pane-img {
+  width: 90%;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 8px 10px #bebebe, -8px -8px 10px #fff;
+  border-radius: 8px;
+}
+
+.tab-pane-img img {
+  width: 95%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.icon-certificate {
+  margin-top: 2px;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.title {
+  font-weight: bold;
+  background-image: linear-gradient(-45deg, #d000f7, #24bae3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 575.98px) {
+  /* CSS cho extra small devices */
+  .tab-item {
+    padding: 5px;
+  }
+}

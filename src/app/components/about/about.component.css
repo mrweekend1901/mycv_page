@@ -1,0 +1,103 @@
+.avatar_wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.avatar_wrap::before {
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  box-shadow: var(--box-shadow);
+  content: "";
+  bottom: 0;
+  z-index: 1;
+}
+
+.avatar {
+  position: relative;
+  width: 90%;
+  z-index: 2;
+}
+
+.gradientText {
+  display: inline-block;
+  background-image: linear-gradient(-45deg, #d000f7, #24bae3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.job::before {
+  content: attr(data-job1);
+  overflow: hidden;
+  display: inline-flex;
+  animation: effectText 1s linear infinite alternate,
+    changeText 4s linear infinite;
+}
+
+.contact_list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact_item {
+  border-radius: 8px;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  box-shadow: var(--box-shadow);
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.contact_item a {
+  color: black;
+}
+
+.contact_item a i {
+  padding: 12px 18px;
+}
+
+.contact_item:hover {
+  background-image: var(--gradient);
+}
+
+.contact_item:hover a {
+  color: #fff;
+}
+
+.content {
+  width: 100%;
+  text-align: justify;
+  line-height: 26px;
+}
+
+.text-animation {
+  font-weight: 700;
+  color: transparent;
+  background-image: var(--gradient-animation);
+  -webkit-background-clip: text;
+  animation: colorShift 5s linear infinite;
+  -webkit-background-size: 500%;
+  background-size: 500%;
+}
+
+@keyframes effectText {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 500px;
+  }
+}
+
+@keyframes changeText {
+  0% {
+    content: attr(data-job1);
+  }
+  100% {
+    content: attr(data-job2);
+  }
+}

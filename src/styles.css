@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free/css/all.css";
+:root {
+  --box-shadow: 8px 8px 20px #bebebe, -8px -8px 20px #fff;
+  --gradient: linear-gradient(-45deg, #d000f7, #24bae3);
+  --gradient-animation: linear-gradient(to left, #d000f7, #24bae3, #f39c12);
+}
+
+* {
+  letter-spacing: 0.05em;
+}
+
+@keyframes colorShift {
+  0% {
+    background-position: 0 100%;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}

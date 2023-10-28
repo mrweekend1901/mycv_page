@@ -1,0 +1,51 @@
+<div>
+  <div class="slider">
+    <div *ngIf="projectData" class="slider__list">
+      <div
+        class="slider__item"
+        *ngFor="let project of projectData; let i = index"
+        [ngClass]="{
+          active: !isReversing && i === currentIndex,
+          reverse: isReversing && i === currentIndex
+        }"
+      >
+        <div class="project" *ngIf="i === currentIndex">
+          <div class="img">
+            <img src="{{ project.img }}" alt="project1" />
+          </div>
+          <div class="name">
+            <span>
+              <h4>{{ project.name }}</h4>
+              <div class="desc">
+                <p>
+                  {{ project.projectdesc }}
+                </p>
+                <div>
+                  <ul class="tag_list">
+                    <li class="tag_item" *ngFor="let tech of project.tech">
+                      {{ tech }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </span>
+            <div class="btn_group">
+              <button class="see_more">Demo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="prev" (click)="prevSlide()"><</button>
+      <button id="next" (click)="nextSlide()">></button>
+    </div>
+    <ul class="dots">
+      <li
+        *ngFor="let project of projectData; let i = index"
+        [ngClass]="{ active: i === currentIndex }"
+      ></li>
+    </ul>
+  </div>
+</div>

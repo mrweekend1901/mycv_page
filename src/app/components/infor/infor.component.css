@@ -1,0 +1,57 @@
+.personal_infor,
+.tech_skill,
+.orther_skill {
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--box-shadow);
+  padding: 10px 30px;
+  border-radius: 20px;
+  animation: showItem 0.8s ease;
+}
+
+.tech_skill,
+.orther_skill {
+  width: 100%;
+}
+
+.infor_list,
+.tech_list,
+.orther_list {
+  margin-top: 10px;
+}
+
+.text-animation {
+  font-weight: 700;
+  color: transparent;
+  background-image: var(--gradient-animation);
+  -webkit-background-clip: text;
+  animation: colorShift 5s linear infinite;
+  -webkit-background-size: 500%;
+  background-size: 500%;
+}
+
+.p2 {
+  margin: 5px 0;
+}
+
+.group {
+  display: flex;
+}
+
+@media (max-width: 575.98px) {
+  /* CSS cho extra small devices */
+  .group {
+    flex-direction: column;
+  }
+}
+
+@keyframes showItem {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY();
+  }
+}

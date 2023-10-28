@@ -1,0 +1,63 @@
+<div *ngFor="let item of aboutData">
+  <div class="row">
+    <div class="col-md-4 col-sm-12">
+      <div class="avatar_wrap">
+        <img class="avatar" src="{{ item.img }}" alt="avatar" />
+      </div>
+    </div>
+    <div
+      class="col-md-8 col-sm-12 pe-5 ps-5 pe-md-4 ps-md-3 pe-lg-0 ps-lg-0 mt-4 mt-sm-0"
+    >
+      <h1 class="title fw-bold">
+        Hi, I'm {{ item.name }} <br />
+        a
+        <div class="gradientText">
+          <div
+            class="job"
+            data-job1="{Developer.}"
+            data-job2="{FrontEnd.}"
+          ></div>
+        </div>
+      </h1>
+      <p class="content mt-2">
+        With a passion for programming and Frontend development, I am seeking an
+        opportunity to immerse myself in a professional work environment to
+        enhance my skills and build a career in this field. Equipped with
+        fundamental knowledge of HTML, JavaScript, React, and more, I am eager
+        to apply these skills to real-world projects. <br />
+        <br />
+        I am committed to becoming a Junior Frontend Developer, specializing in
+        web application development using technologies like React and Vue.js. I
+        value creativity and teamwork as essential components for contributing
+        to projects, and I am dedicated to continuous learning from industry
+        experts.
+      </p>
+      <div class="contact mt-4">
+        <h5 class="text-animation">CONTACT WITH ME</h5>
+        <ul class="contact_list d-flex">
+          <li
+            class="contact_item d-flex justify-content-center align-items-center"
+          >
+            <a href="{{ item.fb }}" target="_blank">
+              <i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </li>
+          <li
+            class="contact_item d-flex justify-content-center align-items-center"
+          >
+            <a href="{{ item.insta }}" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li
+            class="contact_item d-flex justify-content-center align-items-center"
+          >
+            <a href="{{ item.git }}" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

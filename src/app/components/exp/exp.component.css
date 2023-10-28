@@ -1,0 +1,54 @@
+.company_group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--box-shadow);
+  padding: 10px 30px;
+  border-radius: 20px;
+  animation: showItem 0.8s ease;
+}
+
+.text-style {
+  text-align: justify;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+}
+
+.img {
+  width: 100%;
+  height: 200px;
+  margin-right: 20px;
+  flex: 1;
+}
+
+.contentt {
+  flex: 2;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+}
+
+h1.title {
+  font-weight: bold;
+  background-image: linear-gradient(-45deg, #d000f7, #24bae3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.job {
+  text-align: justify;
+}
+
+@keyframes showItem {
+  0% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY();
+  }
+}

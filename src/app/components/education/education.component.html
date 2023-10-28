@@ -1,0 +1,70 @@
+<div class="education">
+  <div class="row">
+    <div class="col-lg-4 col-sm-12 pe-4 ps-5 pe-lg-0 ps-lg-0">
+      <h1 class="title">My Education</h1>
+      <p>Information about my education, certifications and activities.</p>
+    </div>
+    <div
+      class="col-lg-6 col-sm-12 mt-4 mt-lg-0 ms-auto me-auto pe-4 ps-4 pe-lg-0 ps-lg-0"
+    >
+      <div class="tab-box">
+        <!-- Tab items -->
+        <div class="tabs">
+          <div class="tab-item active">
+            <i class="fa-solid fa-user-graduate"></i>
+            Education
+          </div>
+          <div class="tab-item">
+            <i class="fa-solid fa-award"></i>
+            Certificate
+          </div>
+          <div class="tab-item">
+            <i class="fa-solid fa-shapes"></i>
+            Activate
+          </div>
+          <!-- <div class="line"></div> -->
+        </div>
+
+        <!-- Tab content -->
+        <div class="tab-content">
+          <div class="tab-pane active">
+            <span *ngFor="let item of eduData">
+              <h2>{{ item.school }}</h2>
+              <p>
+                {{ item.schooldesc }}
+                <br />GPA: {{ item.gpa }} <br />
+                <br />
+                <q>
+                  {{ item.study }}
+                </q>
+              </p>
+              <div class="tab-pane-img">
+                <img src="{{ item.img }}" alt="school" />
+              </div>
+            </span>
+          </div>
+          <div class="tab-pane">
+            <span *ngFor="let item of certificateData">
+              <h2 class="d-flex align-items-center">
+                <i class="icon-certificate fa-solid fa-certificate"></i>
+                {{ item.name }}
+              </h2>
+              <p>
+                Time: {{ item.time }} <br />
+                {{ item.desc }}
+              </p>
+            </span>
+          </div>
+          <div class="tab-pane">
+            <span *ngFor="let item of activateData">
+              <h2>{{ item.name }}</h2>
+              <p>
+                {{ item.desc }}
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

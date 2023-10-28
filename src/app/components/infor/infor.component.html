@@ -1,0 +1,79 @@
+<div>
+  <div class="row mt-5 ms-1 me-1 ms-md-0 me-md-0">
+    <div class="col-lg-6">
+      <div class="personal_infor">
+        <span
+          class="text-animation d-flex align-items-center justify-content-center border-bottom pb-2"
+        >
+          <i class="fa-solid fa-user"></i>
+          <h5 class="mb-0 ms-1">INFORMATION</h5>
+        </span>
+
+        <!-- Infor -->
+        <ul *ngFor="let item of inForData" class="infor_list">
+          <li class="infor_item">
+            <p class="p2 font-weight-bold">
+              <span class="fw-bold">Name:</span> {{ item.fullName }}
+            </p>
+          </li>
+          <li class="infor_item">
+            <p class="p2">
+              <span class="fw-bold">Date of birth:</span>
+              {{ item.dateOfBirth }}
+            </p>
+          </li>
+
+          <li class="infor_item">
+            <p class="p2">
+              <span class="fw-bold">Phone:</span> {{ item.phone }}
+            </p>
+          </li>
+          <li class="infor_item">
+            <p class="p2">
+              <span class="fw-bold">Email:</span>
+              {{ item.email }}
+            </p>
+          </li>
+          <li class="infor_item">
+            <p class="p2">
+              <span class="fw-bold">Address: </span>{{ item.address }}
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="group col-lg-6 mt-4 mt-lg-0">
+      <div class="tech_skill me-sm-4">
+        <span
+          class="text-animation d-flex align-items-center justify-content-center border-bottom pb-2"
+        >
+          <i class="fa-solid fa-gear"></i>
+          <h5 class="mb-0 ms-1">TECH SKILL</h5>
+        </span>
+
+        <!-- Tech skill -->
+        <ul *ngIf="techSkillData" class="tech_list">
+          <li class="tech_item" *ngFor="let skill of techSkillData">
+            <p class="p2">{{ skill.name }}</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="orther_skill mt-4 mt-sm-0">
+        <span
+          class="text-animation d-flex align-items-center justify-content-center border-bottom pb-2"
+        >
+          <i class="fa-solid fa-hashtag"></i>
+          <h5 class="mb-0 ms-1">OTHER SKILL</h5>
+        </span>
+
+        <!-- Other skill -->
+        <ul *ngIf="otherSkillData" class="orther_list">
+          <li class="orther_item" *ngFor="let id of otherSkillData">
+            <p class="p2">{{ id.name }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
